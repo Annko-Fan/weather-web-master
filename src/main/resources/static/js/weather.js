@@ -32,6 +32,7 @@ var WeatherService = function() {
 		var selectedCity = $('#select_city').val();
 		if(!selectedCity) {
 			fillWeatherData([]);
+			$('#sp_updated_time').text("");
 			return;
 		}
 		var param = {
