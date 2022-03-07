@@ -5,14 +5,6 @@ There will be a dropdown list on the web page for city selection, when city is c
 
 Currently it only supports weatherapi.(weatherapi.com)
 
-Technology stack:
-
-* Spring Boot
-* Spring MVC
-* Spring Test/JUnit/MockMvc
-* jQuery
-* Bootstrap
-
 ## Requirements
 
 * JDK 8
