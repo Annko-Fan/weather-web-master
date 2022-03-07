@@ -11,8 +11,7 @@
 	</parent>
 	<groupId>com.pactera</groupId>
 	<artifactId>weather-web</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>weather-web</name>
 	<description>Current Weather Service</description>
 
