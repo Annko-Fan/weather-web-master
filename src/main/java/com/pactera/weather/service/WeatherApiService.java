@@ -23,6 +23,7 @@ public class WeatherApiService implements IWeatherService<WeatherApiData, Weathe
 		this.restTemplate = restTemplate;
 	}
 
+	//get whole response from weather api
 	@Override
 	public WeatherApiData getWeatherInfo(WeatherApiRequest request) {
 		StringBuilder requestBuider = new StringBuilder();

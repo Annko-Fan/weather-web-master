@@ -17,7 +17,8 @@ import com.pactera.weather.util.Constants;
 @Repository
 public class CityRepository implements ICityRepository {
 	private static Logger logger = LoggerFactory.getLogger(CityRepository.class);
-	
+
+	//get city list from city_list.json
 	@Override
 	public List<City> getCityList() {
 		TypeReference<List<City>> typeReference = new TypeReference<List<City>>(){};

@@ -26,14 +26,11 @@ public class WeatherControllerTest {
 	@Test
     public void verifyHomePage() throws Exception {
         this.mockMvc.perform(get("/")).andExpect(status().isOk()).andExpect(view().name("index"));
-        System.out.println("_________________This is a unit test for verifying homepage________________");
     }
 	
 	@Test
     public void shouldReturnCityList() throws Exception {
         this.mockMvc.perform(get("/retrieveCityList.json")).andDo(print()).andExpect(status().isOk());
-		System.out.println("_________________This is a unit test for verifying shouldReturnCityList________________");
-
 	}
 	
 	@Test
@@ -43,8 +40,6 @@ public class WeatherControllerTest {
 					.andExpect(status().isOk())
 					.andExpect(content().contentType("application/json;charset=UTF-8"))
 					.andExpect(jsonPath("$.city").value("Sydney"));
-		System.out.println("_________________This is a unit test for verifying canRetrieveSydneyWeatherInfo________________");
-
 	}
 	
 	@Test
@@ -52,7 +47,5 @@ public class WeatherControllerTest {
 		this.mockMvc.perform(post("/retrieveCityWeather.json").param("id", "4"))
 				.andDo(print())
 				.andExpect(status().isInternalServerError());
-		System.out.println("_________________This is a unit test for verifying cannotRetrieveWeatherInfoUnknownCity________________");
-
 	}
 }
